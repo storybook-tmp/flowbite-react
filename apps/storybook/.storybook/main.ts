@@ -19,12 +19,18 @@ const config: StorybookConfig = {
   addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-themes"),
-    getAbsolutePath("@storybook/addon-docs")
+    getAbsolutePath("@storybook/addon-docs"),
+    getAbsolutePath("@storybook/addon-mcp"),
   ],
 
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
-  }
+  },
+
+  features: {
+    experimentalCodeExamples: true,
+    experimentalComponentsManifest: true,
+  },
 };
 export default config;
