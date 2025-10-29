@@ -1,11 +1,12 @@
 import { withThemeByClassName } from "@storybook/addon-themes";
-import type { Decorator, Preview } from "@storybook/react";
+import type { Decorator, Preview } from "@storybook/react-vite";
 import React from "react";
 import { ThemeInit } from "../.flowbite-react/init";
 
 import "./style.css";
 
 const preview: Preview = {
+  tags: ['autodocs'],
   parameters: {
     actions: {
       argTypesRegex: "^on[A-Z].*",
